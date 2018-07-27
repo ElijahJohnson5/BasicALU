@@ -1,0 +1,174 @@
+Script started on Wed 16 Nov 2016 10:26:31 AM MST
+]0;elijah@elijah-VirtualBox: ~/113/lab9[01;32melijah@elijah-VirtualBox[00m:[01;34m~/113/lab9[00m$ make main
+gcc -g -Wall -c operations.c
+\gcc -g -Wall -c print.c
+gcc -g -Wall -c registry.c
+gcc -g -Wall -c init.c
+gcc -g -Wall init.o main.c operations.o registry.o print.o -o calculator
+]0;elijah@elijah-VirtualBox: ~/113/lab9[01;32melijah@elijah-VirtualBox[00m:[01;34m~/113/lab9[00m$ \[K./calculator 
+Enter the word size: 68
+Error in word size, must be between 1 and 64, please try again
+Enter the word size: -1
+Error in word size, must be between 1 and 64, please try again
+Enter the word size: 1
+Unsigned values [y/N]: 4
+Enter binary expression: 11 + 0
+Error in input, first entry bigger than the word size
+Error in first half of input
+Enter binary expression: 1 + 0
+1
++
+0
+-
+1
+flags
+OF: 0
+CF: 0
+SF: 1
+PF: 0
+ZF: 0
+Decimal 1
+Do you want to continue [Y/n] y
+Enter the word size: 64
+Unsigned values [y/N]: y
+Enter binary expression: 11111 + 0101110101
+0000000000000000000000000000000000000000000000000000000000011111
++
+0000000000000000000000000000000000000000000000000000000101110101
+----------------------------------------------------------------
+0000000000000000000000000000000000000000000000000000000110010100
+flags
+OF: 0
+CF: 0
+SF: 0
+PF: 1
+ZF: 0
+Unsigned Decimal 404
+Do you want to continue [Y/n] y
+Enter the word size: 5
+Unsigned values [y/N]: 
+Enter binary expression: 10111 - 11
+10111
++
+11101
+-----
+10100
+flags
+OF: 0
+CF: 1
+SF: 1
+PF: 1
+ZF: 0
+Decimal -12
+Do you want to continue [Y/n] 
+Enter the word size: 5
+Unsigned values [y/N]: y
+Enter binary expression: 10111 - 11
+10111
++
+11101
+-----
+10100
+flags
+OF: 0
+CF: 1
+SF: 1
+PF: 1
+ZF: 0
+Unsigned Decimal 20
+Do you want to continue [Y/n] y
+Enter the word size: 5
+Unsigned values [y/N]: 
+Enter binary expression: 10123241 - 1
+error in input, please enter a binary expression
+Enter binary expression: 1011
+Invalid entry, no operation in expression
+Enter binary expression: 1011 t 1
+Invalid entry, no operation in expression
+Enter binary expression: 1234 t 1
+Invalid entry, no operation in expression
+Enter binary expression: 1234 + 1
+error in input, please enter a binary expression
+Enter binary expression: 111 | 01
+00111
+|
+00001
+-----
+00111
+flags
+OF: 0
+CF: 0
+SF: 0
+PF: 0
+ZF: 0
+Decimal 7
+Do you want to continue [Y/n] y
+Enter the word size: 5
+Unsigned values [y/N]: 01  
+Enter binary expression: 01101 & 10011
+01101
+&
+10011
+-----
+00001
+flags
+OF: 0
+CF: 0
+SF: 0
+PF: 0
+ZF: 0
+Decimal 1
+Do you want to continue [Y/n] y
+Enter the word size: 5
+Unsigned values [y/N]: 
+Enter binary expression: 01101 ^ 10011
+01101
+^
+10011
+-----
+11110
+flags
+OF: 0
+CF: 0
+SF: 1
+PF: 1
+ZF: 0
+Decimal -2
+Do you want to continue [Y/n] y
+Enter the word size: 64
+Unsigned values [y/N]: 
+Enter binary expression: 11111 + 11111111111111
+0000000000000000000000000000000000000000000000000000000000011111
++
+0000000000000000000000000000000000000000000000000011111111111111
+----------------------------------------------------------------
+0000000000000000000000000000000000000000000000000100000000011110
+flags
+OF: 0
+CF: 0
+SF: 0
+PF: 0
+ZF: 0
+Decimal 16414
+Do you want to continue [Y/n] y
+Enter the word size: 64
+Unsigned values [y/N]: 
+Enter binary expression: 11111 - 1111111111111
+0000000000000000000000000000000000000000000000000000000000011111
++
+1111111111111111111111111111111111111111111111111110000000000001
+----------------------------------------------------------------
+1111111111111111111111111111111111111111111111111110000000100000
+flags
+OF: 0
+CF: 0
+SF: 1
+PF: 1
+ZF: 0
+Decimal -8160
+Do you want to continue [Y/n] n
+Exiting
+]0;elijah@elijah-VirtualBox: ~/113/lab9[01;32melijah@elijah-VirtualBox[00m:[01;34m~/113/lab9[00m$ exit
+exit
+
+Script done on Wed 16 Nov 2016 10:32:07 AM MST

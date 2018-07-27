@@ -1,0 +1,22 @@
+Elijah Johnson
+11/15/2016
+Lab 9
+
+Purpose: Create a cpu that can perform calculations on registrys filled with binary based on user input, implement doubly linked list and sentinal nodes
+
+a) What I learned from this lab
+I learned how to implement double linked lists and insert nodes into them, I also learned how to use the bitwise operators & | ^ to perform calculations on different binary sequences
+in two different registrys and store the result in a third registry. I also learned how to free doubly linked lists and free everything I need to in a program
+
+b) Issues and How I fixed them
+At one point I was freeing something and then it would delete the string that I needed after strncat the two strings together, I figured out that I didn't need to free that memory in the 
+function but I needed to free it in main after I was done using it. One other issue I had was strncat was copying too many characters because one of the strings I passed was
+not null terminated so it kept going and always said that the number I entered was bigger than the word size. Added one null character at the end to fix it. 
+
+c) Improvements that can be made
+I could improve this by splitting some of my bigger functions into smaller ones, like get_input. I could probably also simplify some of my functions and make them easier to understand
+
+Compare and COntrast Singly Linked list and Doubly Linked list
+Doubly linked lists are good if you need to be able to traverse the list forwards and backwards and if you need to be able to accsess the previous values in the list.
+A signle linked list is good if you only need to move forwards on a list and only acsses the next value
+Doubly linked lists are better for more complicated problems, signly linked lists are simple and easier to use
